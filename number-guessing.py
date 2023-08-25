@@ -5,7 +5,8 @@ easy = 10           # life values
 hard = 5
 answer = random.randint(1,100)   # Choosing a number between 1 and 100 with random module 
 
-def compare(number,guess,given_life):    # Defining a function for compare numbers  
+def compare(number,guess,given_life):      # Defining a function for compare numbers  
+    """This function compares the guessed number and answer."""
     if number > guess:
         print("Too High.")
         return given_life - 1      # If user give a false answer, this will lower user's life 
@@ -18,6 +19,7 @@ def compare(number,guess,given_life):    # Defining a function for compare numbe
 
 
 def user_life():     # Defining a function to choose difficulty and set a life for user
+    """This function sets user's life"""
     difficulty = input("Choose a difficulty. Type 'easy' or 'hard' : ").lower()
     if difficulty == "easy":
         return easy
@@ -26,6 +28,7 @@ def user_life():     # Defining a function to choose difficulty and set a life f
 
 
 def number_guess_game ():   # Defining a function for game 
+    """This is the function that starts the game."""
     print(logo)       
     print("Welcome to Number Guessing Game !")
     print("I'm thinking a number between 1 and 100.")
